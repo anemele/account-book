@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">账号本子</string>
+    <string name="item_name">名称</string>
+    <string name="item_account">账号</string>
+    <string name="todo">TODO</string>
+    <string name="save">保存</string>
+    <string name="search_hint">搜索账号</string>
+    <string name="developing">正在开发，敬请期待</string>
+</resources>
