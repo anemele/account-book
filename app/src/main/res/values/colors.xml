@@ -10,5 +10,8 @@
     <color name="green_a080">#00A080</color>
     <color name="grey_de">#DEDEDE</color>
     <color name="grey_cc">#CCCCCC</color>
+    <color name="grey_88">#888888</color>
+    <color name="grey_33">#2F2F2F</color>
     <color name="green_008d58">#008D58</color>
+    <color name="orange">#FFA500</color>
 </resources>

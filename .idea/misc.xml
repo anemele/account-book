@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/drawable/circle_corner_rectangle.xml" value="0.2265" />
+        <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/drawable/circle_rectangle_solid_white.xml" value="0.2265" />
+        <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/drawable/circle_rectangle_stroke.xml" value="0.2265" />
+        <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
         <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/layout/activity_create.xml" value="0.25364583333333335" />
+        <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/layout/activity_main.xml" value="0.18432971014492755" />
         <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/layout/activity_more.xml" value="0.25364583333333335" />
         <entry key="..\:/Documents/AndroidProjects/account-book/app/src/main/res/layout/activity_search.xml" value="0.25364583333333335" />
