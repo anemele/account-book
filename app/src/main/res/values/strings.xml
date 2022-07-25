@@ -14,4 +14,5 @@
     <string name="agree_text">登录/注册即代表阅读并同意协议</string>
     <string name="protocol_link">www.baidu.com</string>
     <string name="copyright">©Copyright @ Jason Swift 2022-present</string>
+    <string name="abc123">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</string>
 </resources>

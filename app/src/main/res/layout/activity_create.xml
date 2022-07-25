@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:background="@drawable/circle_rectangle_solid_orange"
+            android:background="@drawable/circle_rectangle_solid_green"
             android:text="@string/save"
             android:textColor="@color/white"
             android:textSize="25sp" />
