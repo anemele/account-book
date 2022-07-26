@@ -2,9 +2,11 @@ package com.js.ab;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,9 +21,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Button btnLogIn = findViewById(R.id.login_btn_login);
+        Button btnSignUp = findViewById(R.id.login_btn_signup);
         EditText etAccount = findViewById(R.id.login_account);
         EditText etPassword = findViewById(R.id.login_password);
         CheckBox checkBox = findViewById(R.id.login_btn_agree);
+        TextView tvProtocol = findViewById(R.id.login_agree_protocol);
 
         btnLogIn.setOnClickListener(v -> {
             if (etAccount.getText().toString().isEmpty()) {
@@ -38,6 +42,10 @@ public class LoginActivity extends AppCompatActivity {
             }
             if (etAccount.getText().toString().equals(account) &&
                     etPassword.getText().toString().equals(password)) {
+                etAccount.setText("");
+                etPassword.setText("");
+                checkBox.setChecked(false);
+
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
@@ -45,5 +53,12 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(this, "账号或密码错误", Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SignupActivity.class);
+            startActivity(intent);
+        });
+
+        tvProtocol.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

@@ -1,9 +1,9 @@
 package com.js.ab;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.ImageButton;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MoreActivity extends AppCompatActivity {
 
@@ -12,7 +12,7 @@ public class MoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
 
-        ImageButton btnBack = findViewById(R.id.more_bar_back);
+        Button btnBack = findViewById(R.id.more_bar_back);
         btnBack.setOnClickListener(v -> this.finish());
     }
 }

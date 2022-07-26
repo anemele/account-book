@@ -15,16 +15,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="1">
 
-        <ImageButton
+        <Button
             android:id="@+id/create_bar_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/todo"
+            android:drawableStart="@mipmap/back"
+            android:drawablePadding="5dp"
             android:padding="10dp"
-            android:src="@mipmap/back"
-            android:text="@string/app_name"
-            android:textSize="30sp"
+            android:text="@string/create_account"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -51,13 +54,14 @@
             android:padding="10dp"
             android:src="@mipmap/rand"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/create_bar_sort"
+            app:layout_constraintEnd_toStartOf="@id/create_bar_sort"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/create_bar_sort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/todo"
             android:padding="10dp"
@@ -72,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/grey_cc"
-        app:layout_constraintBottom_toTopOf="@+id/create_save"
+        app:layout_constraintBottom_toTopOf="@id/create_save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/create_bar"

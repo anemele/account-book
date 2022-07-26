@@ -6,13 +6,16 @@
     <string name="save">保存</string>
     <string name="search_hint">搜索账号</string>
     <string name="developing">正在开发，敬请期待</string>
-    <string name="welcome">欢迎回来~</string>
     <string name="account">账号</string>
     <string name="password">密码</string>
     <string name="login">登录</string>
     <string name="signup">注册</string>
     <string name="agree_text">登录/注册即代表阅读并同意协议</string>
-    <string name="protocol_link">www.baidu.com</string>
-    <string name="copyright">©Copyright @ Jason Swift 2022-present</string>
-    <string name="abc123">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</string>
+    <string name="protocol_link"><a href="https://opensource.org/licenses/GPL-3.0">《GPL协议》</a></string>
+    <string name="copyright">©2022-present Jason Swift. All Rights Reserved.</string>
+    <string name="abc_123">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789</string>
+    <string name="more_setting">控制中心</string>
+    <string name="create_account">添加账号</string>
+    <string name="sign_up">注册账号</string>
+    <string name="confirm_password">确认密码</string>
 </resources>
