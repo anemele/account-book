@@ -42,8 +42,6 @@ public class LoginActivity extends AppCompatActivity {
             }
             if (etAccount.getText().toString().equals(account) &&
                     etPassword.getText().toString().equals(password)) {
-                etAccount.setText("");
-                etPassword.setText("");
                 checkBox.setChecked(false);
 
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
