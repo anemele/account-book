@@ -4,11 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.js.ab.Adapter.ContentItemAdapter;
+import com.js.ab.Adapter.TreeItemAdapter;
+import com.js.ab.Bean.ContentItemBean;
+import com.js.ab.Bean.TreeItemBean;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    List<ContentItemBean> mDataContentItem = new ArrayList<>();
+    List<TreeItemBean> mDataTreeItem = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,45 +43,24 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, MoreActivity.class);
             startActivity(intent);
         });
-//        initListView();
+
+        initListView();
     }
 
-//    public void initListView() {
-////        初始化控件
-//        ListView mainTreeListView = findViewById(R.id.main_content_tree);
-//        ListView mainContentListView = findViewById(R.id.main_content_item);
-//        List<Item> treeList = new ArrayList<>();
-//        List<Item> contentList = new ArrayList<>();
-//        ArrayAdapter<Item> treeArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, treeList);
-//        ArrayAdapter<Item> contentArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, contentList);
-//
-////       添加目录、内容
-//        for (int i = 0; i < 20; i++) {
-//            treeList.add(new Item("目录", String.valueOf(i)));
-//            contentList.add(new Item("账号", String.valueOf(i)));
-//        }
-//
-////       设置适配器
-//        mainTreeListView.setAdapter(treeArrayAdapter);
-//        mainContentListView.setAdapter(contentArrayAdapter);
-//
-////        设置点击、长按响应
-//        mainTreeListView.setOnItemClickListener((parent, view, position, id) -> {
-//            Toast.makeText(MainActivity.this, "你选择了目录" + position, Toast.LENGTH_LONG).show();
-//            mainContentListView.setSelection(position);
-//        });
-//        mainTreeListView.setOnItemLongClickListener((parent, view, position, id) -> {
-//            Toast.makeText(MainActivity.this, "你长按了目录" + position, Toast.LENGTH_LONG).show();
-//            return true;
-//        });
-//        mainContentListView.setOnItemClickListener((parent, view, position, id) ->
-//                Toast.makeText(MainActivity.this, "你点击了账号" + position, Toast.LENGTH_LONG).show());
-//        mainContentListView.setOnItemLongClickListener((parent, view, position, id) -> {
-//            Toast.makeText(MainActivity.this, "你长按了目录" + position, Toast.LENGTH_LONG).show();
-//            return true;
-//        });
-//
-//    }
+    public void initListView() {
+//        初始化控件
+        ListView mainTreeListView = findViewById(R.id.main_lv_tree);
+        ListView mainContentListView = findViewById(R.id.main_lv_content);
+
+        mainTreeListView.setAdapter(new TreeItemAdapter(this, mDataTreeItem));
+        mainContentListView.setAdapter(new ContentItemAdapter(this, mDataContentItem));
+        for (int i = 0; i < 8; i++) {
+            mDataTreeItem.add(new TreeItemBean("分类" + i));
+        }
+        for (int i = 0; i < 20; i++) {
+            mDataContentItem.add(new ContentItemBean("账号名称" + i, "账号" + i));
+        }
+    }
 
     private long exitTime = 0;
 
@@ -86,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     private void exit() {
         if ((System.currentTimeMillis() - exitTime) > 2000) {
             Toast.makeText(getApplicationContext(),
-                    "再按一次退出登录",
+                    "再按一次返回键退出",
                     Toast.LENGTH_SHORT).show();
             exitTime = System.currentTimeMillis();
         } else {

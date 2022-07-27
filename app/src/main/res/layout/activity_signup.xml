@@ -121,41 +121,28 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/signup_agree_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/signup_btn_signup" />
-
-        <TextView
-            android:id="@+id/signup_agree_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/agree_text"
             android:textColor="@color/black"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/signup_btn_agree"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/signup_agree_protocol"
-            app:layout_constraintStart_toEndOf="@id/signup_btn_agree"
-            app:layout_constraintTop_toTopOf="@id/signup_btn_agree" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_btn_signup" />
 
         <TextView
             android:id="@+id/signup_agree_protocol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
             android:layout_marginEnd="50dp"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/protocol_link"
-            app:layout_constraintBottom_toBottomOf="@id/signup_agree_text"
+            app:layout_constraintBottom_toBottomOf="@id/signup_btn_agree"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/signup_agree_text"
-            app:layout_constraintTop_toTopOf="@id/signup_agree_text" />
+            app:layout_constraintStart_toEndOf="@id/signup_btn_agree"
+            app:layout_constraintTop_toTopOf="@id/signup_btn_agree" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

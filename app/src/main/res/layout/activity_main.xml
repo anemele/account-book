@@ -77,38 +77,29 @@
         app:layout_constraintVertical_weight="9">
 
         <ListView
-            android:id="@+id/main_content_tree"
+            android:id="@+id/main_lv_tree"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:divider="@null"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/main_list_splitter"
+            app:layout_constraintEnd_toStartOf="@id/main_lv_content"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </ListView>
-
-        <View
-            android:id="@+id/main_list_splitter"
-            android:layout_width="0.1dp"
-            android:layout_height="match_parent"
-            android:background="@color/grey_de"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/main_content_item"
-            app:layout_constraintStart_toEndOf="@id/main_content_tree"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ListView
-            android:id="@+id/main_content_item"
+            android:id="@+id/main_lv_content"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:divider="@null"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="2"
-            app:layout_constraintStart_toEndOf="@id/main_list_splitter"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toEndOf="@id/main_lv_tree"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        </ListView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
